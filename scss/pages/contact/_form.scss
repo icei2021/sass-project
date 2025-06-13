@@ -1,0 +1,75 @@
+@use "../../base/variables" as v;
+@use "../../base/mixins" as mixin;
+
+.contact-main {
+  padding: 2rem 0;
+  .form-main {
+    display: flex;
+    gap: 2rem;
+    justify-content: space-around;
+    align-items: center;
+
+    .form-left {
+      width: 100%;
+      max-width: 850px;
+      .form-title {
+        /*  color: v.$colorPrimario;
+        font-family: v.$fuentePrimaria;
+        font-size: 1.3rem;
+        margin-bottom: 1.5rem; */
+        @include mixin.titleMixinCustom(v.$colorPrimario, 1.5rem);
+      }
+
+      .form-description {
+        color: v.$colorOscuro;
+        font-family: v.$fuenteSecundaria;
+        line-height: 1.6;
+        text-align: justify;
+        margin-bottom: 1rem;
+      }
+
+      .form-top {
+        display: flex;
+        gap: 1rem;
+        .form-group {
+          margin-bottom: 1rem;
+
+          .form-label {
+            color: v.$colorOscuro;
+            font-family: v.$fuenteSecundaria;
+            font-size: 0.9rem;
+          }
+          .form-input {
+            display: block;
+            padding: 0.2rem;
+            font-size: 1.1rem;
+            border-radius: 0.3rem;
+            border: 1px solid v.$colorOscuro;
+          }
+        }
+      }
+
+      #message {
+        display: block;
+        padding: 0.2rem;
+        font-size: 1.1rem;
+        border-radius: 0.3rem;
+        border: 1px solid v.$colorOscuro;
+        margin-bottom: 1rem;
+      }
+
+      .form-button {
+        padding: 0.4rem 1.3rem;
+        border-radius: 0.3rem;
+        background-color: v.$colorPrimario;
+        color: v.$colorClaro;
+        border: none;
+        cursor: pointer;
+      }
+    }
+
+    .form-right {
+      width: 250px;
+    }
+  }
+}

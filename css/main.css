@@ -1,0 +1,294 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+html {
+  font-size: 16px;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.header {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)), url(../img/header.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.header .navigation {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem 0;
+  backdrop-filter: blur(5px);
+  border-radius: 5px;
+}
+.header .navigation .logo {
+  color: #F6F8FC;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+.header .navigation .navigation-menu {
+  display: flex;
+  gap: 1rem;
+}
+.header .navigation .navigation-menu .navigation-link {
+  color: #F6F8FC;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+.header .navigation .fa-cart-shopping {
+  color: #F6F8FC;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.shop {
+  padding: 2.5rem 0;
+}
+.shop .subtitle {
+  color: #FF3737;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+.shop .shop-text {
+  color: #797979;
+  font-size: 1.1rem;
+  text-align: justify;
+  line-height: 1.6;
+  font-family: "Source Sans 3", sans-serif;
+}
+
+.parallax {
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)), url(../img/parallax.jpg);
+  padding: 4rem 0;
+  background-attachment: fixed;
+  margin-bottom: 2rem;
+}
+.parallax .parallax-content .subtitle {
+  color: #F6F8FC;
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 1.3rem;
+}
+.parallax .parallax-content .parallax-text {
+  color: #F6F8FC;
+  font-size: 1rem;
+  text-align: center;
+  font-weight: 300;
+  font-family: "Source Sans 3", sans-serif;
+  line-height: 1.6;
+}
+
+.accessories {
+  /* flex-direction: column;
+  align-items: center; */
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 4rem;
+}
+
+.accessory {
+  width: 100%;
+  max-width: 350px;
+}
+
+.accessory-top {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(250, 250, 250);
+  margin-bottom: 1rem;
+}
+
+.new, .stock {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.9rem;
+  padding: 3px 7px;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+.new {
+  background-color: #28a745;
+  color: #f8f9fa;
+}
+
+.stock {
+  background-color: #dc3545;
+  color: #f8f9fa;
+}
+
+.accessory-top img {
+  width: 80%;
+}
+
+.fa-cart-plus {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  font-size: 1.1rem;
+  color: #343a40;
+  cursor: pointer;
+}
+
+.accessory-title {
+  text-align: center;
+  font-size: 1.1rem;
+  color: gray;
+  margin-bottom: 0.7rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.accessory-prices {
+  display: flex;
+  justify-content: space-around;
+}
+
+.price-before {
+  color: #dc3545;
+  text-decoration: line-through;
+  font-size: 1.1rem;
+}
+
+.price-after {
+  color: #28a745;
+  font-size: 1.1rem;
+}
+
+.title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+.subscribe-box {
+  background-color: red;
+  padding: 2rem 0;
+}
+.subscribe-box .subscribe-content {
+  display: flex;
+  justify-content: space-between;
+}
+.subscribe-box .subscribe-content .subscribe-title {
+  color: #f8f9fa;
+  font-size: 1.5rem;
+  font-family: "Montserrat", sans-serif;
+}
+.subscribe-box .subscribe-content .form-contact .subscribe-input {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  width: 350px;
+  padding: 0.4rem;
+  border-bottom: 3px solid #F6F8FC;
+}
+.subscribe-box .subscribe-content .form-contact .subscribe-button {
+  background-color: #FF3737;
+  font-family: 1.1rem;
+  padding: 0.5rem 2.5rem;
+  border-radius: 5px;
+  color: #F6F8FC;
+  font-size: 1.1rem;
+  border: 1px solid #F6F8FC;
+}
+.subscribe-box .subscribe-content .form-contact .subscribe-button:hover {
+  background-color: blue;
+  cursor: pointer;
+}
+
+.footer {
+  background-color: #343A40;
+  padding: 1rem 0;
+  text-align: center;
+  font-family: "Source Sans 3", sans-serif;
+  color: #F6F8FC;
+}
+
+.contact-main {
+  padding: 2rem 0;
+}
+.contact-main .form-main {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-around;
+  align-items: center;
+}
+.contact-main .form-main .form-left {
+  width: 100%;
+  max-width: 850px;
+}
+.contact-main .form-main .form-left .form-title {
+  /*  color: v.$colorPrimario;
+  font-family: v.$fuentePrimaria;
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem; */
+  color: #FF3737;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  text-align: left;
+  margin-bottom: 1rem;
+}
+.contact-main .form-main .form-left .form-description {
+  color: #343A40;
+  font-family: "Source Sans 3", sans-serif;
+  line-height: 1.6;
+  text-align: justify;
+  margin-bottom: 1rem;
+}
+.contact-main .form-main .form-left .form-top {
+  display: flex;
+  gap: 1rem;
+}
+.contact-main .form-main .form-left .form-top .form-group {
+  margin-bottom: 1rem;
+}
+.contact-main .form-main .form-left .form-top .form-group .form-label {
+  color: #343A40;
+  font-family: "Source Sans 3", sans-serif;
+  font-size: 0.9rem;
+}
+.contact-main .form-main .form-left .form-top .form-group .form-input {
+  display: block;
+  padding: 0.2rem;
+  font-size: 1.1rem;
+  border-radius: 0.3rem;
+  border: 1px solid #343A40;
+}
+.contact-main .form-main .form-left #message {
+  display: block;
+  padding: 0.2rem;
+  font-size: 1.1rem;
+  border-radius: 0.3rem;
+  border: 1px solid #343A40;
+  margin-bottom: 1rem;
+}
+.contact-main .form-main .form-left .form-button {
+  padding: 0.4rem 1.3rem;
+  border-radius: 0.3rem;
+  background-color: #FF3737;
+  color: #F6F8FC;
+  border: none;
+  cursor: pointer;
+}
+.contact-main .form-main .form-right {
+  width: 250px;
+}
+
+/*# sourceMappingURL=main.css.map */

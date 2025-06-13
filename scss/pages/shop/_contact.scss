@@ -1,0 +1,46 @@
+@use "../../base/variables" as v;
+
+.subscribe-box{
+    background-color: red;
+    padding: 2rem 0;
+
+    .subscribe-content{
+        display: flex;
+        justify-content: space-between;
+
+        .subscribe-title{
+            color: #f8f9fa;
+            font-size: 1.5rem;
+            font-family: v.$fuentePrimaria;
+        }
+
+        .form-contact{
+            .subscribe-input{
+                border: none;
+                outline: none;
+                background-color: transparent;
+                width: 350px;
+                padding: 0.4rem;
+                border-bottom: 3px solid v.$colorClaro;
+        }
+
+        .subscribe-button{
+            background-color: v.$colorPrimario;
+            font-family: 1.1rem;
+            padding: 0.5rem 2.5rem;
+            border-radius: 5px;
+            color: v.$colorClaro;
+            font-size: 1.1rem;
+            border: 1px solid v.$colorClaro;
+
+            &:hover{
+                background-color: blue;
+                cursor: pointer;
+            }
+        }
+        
+    }
+
+
+}
+}

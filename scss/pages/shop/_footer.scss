@@ -1,0 +1,8 @@
+@use "../../base/variables" as v;
+.footer{
+    background-color: v.$colorOscuro;
+    padding: 1rem 0;
+    text-align: center;
+    font-family: v.$fuenteSecundaria;
+    color: v.$colorClaro;
+}

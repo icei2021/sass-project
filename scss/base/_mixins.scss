@@ -1,0 +1,16 @@
+@use "./variables" as v;
+
+@mixin titleMixin {
+  color: v.$colorPrimario;
+  font-family: v.$fuentePrimaria;
+  font-size: 1.5rem;
+  margin-bottom: v.$separador;
+}
+
+@mixin titleMixinCustom($color, $tamanio, $alineacion: left) {
+  color: $color;
+  font-family: v.$fuentePrimaria;
+  font-size: $tamanio;
+  text-align: $alineacion;
+  margin-bottom: v.$separador;
+}
