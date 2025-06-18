@@ -28,34 +28,70 @@ html {
   padding: 1.5rem 0;
   backdrop-filter: blur(5px);
   border-radius: 5px;
+  position: relative;
 }
 .header .navigation .logo {
-  color: #F6F8FC;
+  color: #f6f8fc;
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
   font-size: 1.3rem;
+  position: relative;
+  z-index: 1000;
+}
+.header .navigation .form-label {
+  position: absolute;
+  right: 0;
+}
+.header .navigation #menu {
+  display: none;
+}
+.header .navigation #menu:checked ~ .navigation-menu {
+  left: -35px;
+}
+.header .navigation .menu-icon {
+  color: #f6f8fc;
+  font-size: 1.5rem;
 }
 .header .navigation .navigation-menu {
   display: flex;
   gap: 1rem;
+  transition: all 0.5s ease-in;
+}
+@media (max-width: 768px) {
+  .header .navigation .navigation-menu {
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    left: -65%;
+    top: 0;
+    width: 50%;
+    height: 100vh;
+    padding: 1.5rem;
+    padding-top: 4rem;
+  }
 }
 .header .navigation .navigation-menu .navigation-link {
-  color: #F6F8FC;
+  color: #f6f8fc;
   font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 1.1rem;
+}
+.header .navigation .fa-cart-shopping {
+  color: #f6f8fc;
   font-weight: bold;
   font-size: 1.3rem;
 }
-.header .navigation .fa-cart-shopping {
-  color: #F6F8FC;
-  font-weight: bold;
-  font-size: 1.3rem;
+@media (max-width: 768px) {
+  .header .navigation .fa-cart-shopping {
+    display: none;
+  }
 }
 
 .shop {
   padding: 2.5rem 0;
 }
 .shop .subtitle {
-  color: #FF3737;
+  color: #ff3737;
   font-family: "Montserrat", sans-serif;
   font-size: 1.5rem;
   margin-bottom: 1rem;
@@ -75,7 +111,7 @@ html {
   margin-bottom: 2rem;
 }
 .parallax .parallax-content .subtitle {
-  color: #F6F8FC;
+  color: #f6f8fc;
   font-size: 1.5rem;
   text-align: center;
   font-weight: 500;
@@ -83,7 +119,7 @@ html {
   margin-bottom: 1.3rem;
 }
 .parallax .parallax-content .parallax-text {
-  color: #F6F8FC;
+  color: #f6f8fc;
   font-size: 1rem;
   text-align: center;
   font-weight: 300;
@@ -186,6 +222,13 @@ html {
   display: flex;
   justify-content: space-between;
 }
+@media (max-width: 992px) {
+  .subscribe-box .subscribe-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+}
 .subscribe-box .subscribe-content .subscribe-title {
   color: #f8f9fa;
   font-size: 1.5rem;
@@ -197,16 +240,16 @@ html {
   background-color: transparent;
   width: 350px;
   padding: 0.4rem;
-  border-bottom: 3px solid #F6F8FC;
+  border-bottom: 3px solid #f6f8fc;
 }
 .subscribe-box .subscribe-content .form-contact .subscribe-button {
-  background-color: #FF3737;
+  background-color: #ff3737;
   font-family: 1.1rem;
   padding: 0.5rem 2.5rem;
   border-radius: 5px;
-  color: #F6F8FC;
+  color: #f6f8fc;
   font-size: 1.1rem;
-  border: 1px solid #F6F8FC;
+  border: 1px solid #f6f8fc;
 }
 .subscribe-box .subscribe-content .form-contact .subscribe-button:hover {
   background-color: blue;
@@ -214,11 +257,11 @@ html {
 }
 
 .footer {
-  background-color: #343A40;
+  background-color: #343a40;
   padding: 1rem 0;
   text-align: center;
   font-family: "Source Sans 3", sans-serif;
-  color: #F6F8FC;
+  color: #f6f8fc;
 }
 
 .contact-main {
@@ -239,14 +282,14 @@ html {
   font-family: v.$fuentePrimaria;
   font-size: 1.3rem;
   margin-bottom: 1.5rem; */
-  color: #FF3737;
+  color: #ff3737;
   font-family: "Montserrat", sans-serif;
   font-size: 1.5rem;
   text-align: left;
   margin-bottom: 1rem;
 }
 .contact-main .form-main .form-left .form-description {
-  color: #343A40;
+  color: #343a40;
   font-family: "Source Sans 3", sans-serif;
   line-height: 1.6;
   text-align: justify;
@@ -260,7 +303,7 @@ html {
   margin-bottom: 1rem;
 }
 .contact-main .form-main .form-left .form-top .form-group .form-label {
-  color: #343A40;
+  color: #343a40;
   font-family: "Source Sans 3", sans-serif;
   font-size: 0.9rem;
 }
@@ -269,21 +312,21 @@ html {
   padding: 0.2rem;
   font-size: 1.1rem;
   border-radius: 0.3rem;
-  border: 1px solid #343A40;
+  border: 1px solid #343a40;
 }
 .contact-main .form-main .form-left #message {
   display: block;
   padding: 0.2rem;
   font-size: 1.1rem;
   border-radius: 0.3rem;
-  border: 1px solid #343A40;
+  border: 1px solid #343a40;
   margin-bottom: 1rem;
 }
 .contact-main .form-main .form-left .form-button {
   padding: 0.4rem 1.3rem;
   border-radius: 0.3rem;
-  background-color: #FF3737;
-  color: #F6F8FC;
+  background-color: #ff3737;
+  color: #f6f8fc;
   border: none;
   cursor: pointer;
 }

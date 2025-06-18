@@ -14,3 +14,15 @@
   text-align: $alineacion;
   margin-bottom: v.$separador;
 }
+
+@mixin medium {
+  @media (max-width: v.$medium) {
+    @content;
+  }
+}
+
+@mixin little {
+  @media (max-width: v.$mobile) {
+    @content;
+  }
+}
